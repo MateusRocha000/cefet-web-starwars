@@ -20,10 +20,12 @@ function callbackFilme()
 			let lista = "";
 			for(let film of filmes)
 			{
-				lista += `<a href= "index.html"><li data-episode-url="http://swapi.co/api/films/${film.episode_id}/">Episode ${film.episode_id}: ${film.title}</a></li>`
+				lista += `<li data-episode-url="http://swapi.co/api/films/${film.episode_id}/">Episode ${film.episode_id}: ${film.title}</li>`;
+
+
 			}
 			document.querySelector("#movies ul").innerHTML = lista;
-			document.querySelector(".flow div").innerHTML = filme.opening_crawl;
+			document.querySelector('.reading-animation').innerHTML = 'Episode ' + film.episode_id + '\n' + film.title.toUpperCase() + '\n\n' + film.opening_crawl;
 		}
 	}
 }
